@@ -9,7 +9,7 @@ require('dotenv').config();
 const MONGODB_URL = process.env.MONGODB_URL;
 
 mongoose
-  .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(MONGODB_URL) // Simplified connection without deprecated options
   .then(() => {
     console.log("MongoDB connection successful...");
   })
