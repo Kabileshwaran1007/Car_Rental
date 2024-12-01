@@ -1,5 +1,5 @@
-const Booking = require('../models/booking');
-const User = require('../models/user');
+const User = require('../Models/user');
+const Booking = require('../Models/booking');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
