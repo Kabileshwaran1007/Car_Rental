@@ -1,5 +1,5 @@
 // controllers/userController.js
-const User = require('../Models/User');  // Assuming you have a User model
+const User = require('../models/User');  // Assuming you have a User model
 const bcrypt = require('bcrypt');
 
 // User registration function

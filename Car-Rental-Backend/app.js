@@ -20,10 +20,12 @@ app.use(express.json());
 app.use(cors()); // Enable CORS for all origins
 
 // Import and use routes
-const userRoutes = require('./routes/UserRoutes');
+
 const bookings = require('./routes/BookingRoutes');
+const userRoutes = require('./routes/UserRoutes');
 app.use('/api', userRoutes);
-app.use('/api',bookings)
+app.use('/api',bookings);
+app.use('/',"hello world this is car rendal project");
 // const productRoutes = require('./routes/ProductRoutes');
 // app.use(productRoutes);
 
