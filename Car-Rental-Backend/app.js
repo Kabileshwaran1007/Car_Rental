@@ -21,8 +21,8 @@ app.use(cors()); // Enable CORS for all origins
 
 // Import and use routes
 
-const bookings = require('./routes/BookingRoutes');
-const userRoutes = require('./routes/UserRoutes');
+const bookings = require('./routers/BookingRoutes');
+const userRoutes = require('./routers/UserRoutes');
 app.use('/api', userRoutes);
 app.use('/api',bookings);
 app.use('/',"hello world this is car rendal project");
