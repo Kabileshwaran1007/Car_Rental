@@ -22,6 +22,6 @@ const userSchema = new mongoose.Schema({
 });
 
 // Check if the model already exists in the registry
-const User = mongoose.models.User || mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;
