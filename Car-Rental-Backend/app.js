@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 });
 
 // Token verification middleware
-const verifyToken = require("./middleware/AuthMiddleware");
+const verifyToken = require("./Middleware/AuthMiddleware");
 
 // Unprotected route
 app.get("/unprotected", (req, res) => {
