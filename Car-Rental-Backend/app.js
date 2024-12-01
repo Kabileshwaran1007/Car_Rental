@@ -4,9 +4,10 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const PORT = process.env.PORT || 5050;
 require('dotenv').config();
+
 // MongoDB connection
 const MONGODB_URL = process.env.MONGODB_URL;
-// MongoDB connection
+
 mongoose
   .connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
@@ -20,15 +21,17 @@ app.use(express.json());
 app.use(cors()); // Enable CORS for all origins
 
 // Import and use routes
-
 const bookings = require('./routers/BookingRoutes');
 const userRoutes = require('./routers/UserRoutes');
 app.use('/api', userRoutes);
-app.use('/api',bookings);
-app.use('/',"hello world this is car rendal project");
-// const productRoutes = require('./routes/ProductRoutes');
-// app.use(productRoutes);
+app.use('/api', bookings);
 
+// Home route
+app.get('/', (req, res) => {
+    res.send("Hello world! This is the car rental project.");
+});
+
+// Token verification middleware
 const verifyToken = require("./middleware/AuthMiddleware");
 
 // Unprotected route
