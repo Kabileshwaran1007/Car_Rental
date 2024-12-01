@@ -69,4 +69,7 @@ const bookingSchema = new mongoose.Schema({
   status: { type: String, default: 'Payment Successful' }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Booking', bookingSchema);
+
+const Booking = mongoose.models.Booking || mongoose.model('Booking', bookingSchema);
+
+module.exports = Booking;
