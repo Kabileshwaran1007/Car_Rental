@@ -1,4 +1,4 @@
-const Booking = require('../../Car-Rental-Backend/models/Booking');
+const Booking = require('../models/Booking');
 const User = require('../models/User');
 const mongoose = require('mongoose');
 require('dotenv').config();
